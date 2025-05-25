@@ -1,4 +1,3 @@
-/*! InstantDataScraperNext - 2025-01-29 */
 
 function e(e, t, n, o, r, a, i) {
   var s = {},
@@ -414,6 +413,7 @@ function x(e, t) {
     ),
     Object.keys(s.config.deletedFields).length && $("#resetColumns").show();
   var n = N(i.url);
+
   $("#wrongTable").show(),
     s.config.infinateScrollChecked &&
       ($("#nextButton").hide(),
@@ -462,9 +462,16 @@ function x(e, t) {
             .off("click")
             .click(function () {
               console.log("Downloading CSV..."), r(b), P({ download: !0 });
+              var url = i.url;
+              /////////////////////
+              var url = i.url;
+              // var hostname = new URL(i.url).hostname;
+              var nameFromInput = document.querySelector(".filename").value.trim();
+              var finalFileName = nameFromInput + "____" + url + ".csv";
+              ////////////////////
               let e = w(s.data);
               e.data.forEach((t, n) => {
-                t.forEach((t, o) => {
+                t.forEach((t, o) => { 
                   Array.isArray(t) &&
                     (e.data[n][o] = Papa.unparse([t], {
                       quotes: !0,
@@ -476,8 +483,9 @@ function x(e, t) {
                   new Blob([Papa.unparse(e, { quotes: !0, escapeChar: '"' })], {
                     type: "application/octet-stream",
                   }),
-                  n + ".csv"
+                  finalFileName
                 );
+                window.close();
             }),
           $("#xlsx")
             .off("click")
