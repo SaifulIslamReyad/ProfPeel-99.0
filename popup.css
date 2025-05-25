@@ -1,0 +1,110 @@
+/* General Body Styling */
+body {
+    padding-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    background-color: #f5faff;
+    color: #003366;
+}
+
+/* Button Styling */
+.btn {
+    display: none;
+    margin: 3px;
+    padding: 4px 8px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 11px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Alert Styling */
+.alert {
+    display: none;
+    margin: 3px;
+    padding: 6px;
+    background-color: #cce5ff;
+    color: #004085;
+    font-size: 11px;
+    border: 1px solid #b8daff;
+    border-radius: 3px;
+}
+
+/* Delay Input Styling */
+#delay {
+    display: none;
+    margin: 3px;
+    padding: 4px;
+    font-size: 11px;
+    border: 1px solid #007BFF;
+    border-radius: 3px;
+    width: 60px;
+}
+
+/* Form Layout */
+form {
+    margin-left: 3px;
+    margin-right: -3px;
+}
+
+/* Info & Stats Sections */
+#info {
+    margin-top: 5px;
+}
+#stats {
+    margin-top: 30px;
+}
+
+/* Wait Elements */
+#wait-spider {
+    height: 100px;
+    margin-top: 15px;
+    text-align: center;
+}
+#wait {
+    margin: 15px;
+    text-align: center;
+    font-size: 11px;
+}
+
+/* Help Button */
+#help {
+    float: right;
+    margin-right: 3px;
+    font-size: 11px;
+    color: #007BFF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Header & Layout Fixes */
+.hot-header {
+    position: relative;
+    font-size: 12px;
+}
+
+.remove-column {
+    position: absolute;
+    right: 0;
+}
+
+/* Main Table Wrapper */
+#hot {
+    overflow: hidden;
+}
+
+/* Infinite Scroll Padding */
+#infinateScrollElement {
+    margin-left: 3px;
+}
+
+/* Content initially hidden */
+#content {
+    display: none;
+}
+
