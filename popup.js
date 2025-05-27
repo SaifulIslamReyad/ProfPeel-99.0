@@ -467,7 +467,7 @@ function x(e, t) {
               var url = i.url;
               // var hostname = new URL(i.url).hostname;
               var nameFromInput = document.querySelector(".filename").value.trim();
-              var finalFileName = nameFromInput + "____" + url + ".csv";
+              var finalFileName = nameFromInput + "" + url.replace("https","") + ".csv";
               ////////////////////
               let e = w(s.data);
               e.data.forEach((t, n) => {
