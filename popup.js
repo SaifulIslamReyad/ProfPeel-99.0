@@ -1,4 +1,3 @@
-
 function e(e, t, n, o, r, a, i) {
   var s = {},
     c = null,
@@ -241,8 +240,31 @@ function h(e) {
         });
       }),
     };
-  return (s.names = r), (s.namePaths = a), d;
+
+  // const preferredKeywords = [
+  //   "name",
+  //   "href",
+  //   "src",
+  //   "mail",
+  //   "title",
+  //   "phone",
+  //   "contact",
+  //   "office",
+  //   "call",
+  //   "url",
+  // ];
+
+  // d.fields = d.fields.map((field) => {
+  //   for (let keyword of preferredKeywords) {
+  //     if (field.toLowerCase().includes(keyword)) return keyword;
+  //   }
+  //   return field;
+  // });
+
+  // return (s.names = d.fields), (s.namePaths = a), d;
+    return (s.names = r), (s.namePaths = a), d;
 }
+
 function g(e) {
   return e.map(function (e) {
     return e in s.config.headers ? s.config.headers[e] : e;
@@ -466,12 +488,15 @@ function x(e, t) {
               /////////////////////
               var url = i.url;
               // var hostname = new URL(i.url).hostname;
-              var nameFromInput = document.querySelector(".filename").value.trim();
-              var finalFileName = nameFromInput + "" + url.replace("https","") + ".csv";
+              var nameFromInput = document
+                .querySelector(".filename")
+                .value.trim();
+              var finalFileName =
+                nameFromInput + "" + url.replace("https", "") + ".csv";
               ////////////////////
               let e = w(s.data);
               e.data.forEach((t, n) => {
-                t.forEach((t, o) => { 
+                t.forEach((t, o) => {
                   Array.isArray(t) &&
                     (e.data[n][o] = Papa.unparse([t], {
                       quotes: !0,
@@ -485,7 +510,7 @@ function x(e, t) {
                   }),
                   finalFileName
                 );
-                window.close();
+              window.close();
             }),
           $("#xlsx")
             .off("click")
