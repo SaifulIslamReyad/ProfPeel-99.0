@@ -241,28 +241,28 @@ function h(e) {
       }),
     };
 
-  // const preferredKeywords = [
-  //   "name",
-  //   "href",
-  //   "src",
-  //   "mail",
-  //   "title",
-  //   "phone",
-  //   "contact",
-  //   "office",
-  //   "call",
-  //   "url",
-  // ];
+  const preferredKeywords = [
+    "name",
+    // "href",
+    "src",
+    "mail",
+    "title",
+    "phone",
+    "contact",
+    "office",
+    "call",
+    "url",
+  ];
 
-  // d.fields = d.fields.map((field) => {
-  //   for (let keyword of preferredKeywords) {
-  //     if (field.toLowerCase().includes(keyword)) return keyword;
-  //   }
-  //   return field;
-  // });
+  d.fields = d.fields.map((field) => {
+    for (let keyword of preferredKeywords) {
+      if (field.toLowerCase().includes(keyword)) return keyword;
+    }
+    return field;
+  });
 
-  // return (s.names = d.fields), (s.namePaths = a), d;
-    return (s.names = r), (s.namePaths = a), d;
+  return (s.names = d.fields), (s.namePaths = a), d;
+  // return (s.names = r), (s.namePaths = a), d;
 }
 
 function g(e) {
